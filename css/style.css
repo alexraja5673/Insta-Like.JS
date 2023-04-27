@@ -1,0 +1,73 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family: Arial, sans-serif;
+	
+}
+.container{
+	width:90%;
+	margin:auto;
+}
+.row{
+	display:flex;
+	flex-direction:column;
+}
+.col{
+	width:33.33%;
+}
+.card{
+	box-shadow:0 0 10px #red;
+}
+img{
+	width:100%;
+}
+.icon{
+	display:flex;
+	/* justify-content:center; */
+	/* align-items:center; */
+	/* margin:auto; */
+ } 
+.icon .like{
+	width:50%;
+	display:flex;
+	gap:12px;
+}
+.like i{
+	font-size:20px;
+	cursor:pointer;
+}
+.save{
+	width:50%;
+}
+.save i{
+	font-size:20px;
+	float:right;
+}
+p{
+	position:absolute;
+	top:30px;
+	display:flex;
+}
+p span{
+	margin-right:10px;
+}
+
+.same{
+	display:flex;
+	position:relative;
+}
+.likeBtn-ch{
+	position:absolute;
+	opacity:0;
+	color:red;
+	z-index:-1;
+	transition:all ease .5s;
+}
+.show{
+	opacity:1;
+	/* z-index:1; */
+}
+.border{
+	color:red;
+}

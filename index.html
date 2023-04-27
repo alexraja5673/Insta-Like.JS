@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+	 <title> Insta Like </title>
+	 <meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link href="css/style.css" rel="stylesheet">
+	 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<head>
+<body class="body">
+	
+	 <section class="main">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="card">
+						<img src="image/team-1.jpg">
+						<div class="icon">
+							<div class="like">
+							<div class="same">
+								<i class="ri-heart-line likeBtn"></i>
+								<i class="ri-heart-fill likeBtn-ch"></i>
+								<p> <span class="inc"> 99 </span> likes</p>
+							</div>
+								<i class="ri-chat-3-line"></i>
+								<i class="ri-send-plane-fill"></i>
+							</div>
+							<div class="save">
+								<i class="ri-bookmark-line"></i>
+							</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+	</section>
+			
+			
+					
+		
+	
+
+	<script>
+		let like=document.getElementsByClassName("likeBtn")[0];
+		<!-- let like=document.getElementsByClassName("likeBtn-ch")[0]; -->
+		
+		like.addEventListener("click",increase)
+		
+		function increase(){
+			parent=this.parentNode;
+			show=parent.querySelector(".likeBtn-ch");
+			if(show.classList.contains("show")){
+				show.classList.remove("show");
+				ele=parent.querySelector(".inc");
+				count=parent.querySelector(".inc").innerHTML;
+				ele.innerHTML=count-1;
+				like.classList.remove("border");
+			}else{
+			show.classList.add("show");
+			ele=parent.querySelector(".inc");
+				count=ele.innerHTML;
+				ele.innerHTML=null;
+				count++;
+				ele.innerHTML=count;
+				like.classList.add("border");
+			}
+			
+			
+		}
+		
+		
+		
+		
+		
+	
+		
+		
+	</script>
+</body>
+</html>
